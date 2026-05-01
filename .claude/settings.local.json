@@ -3,7 +3,18 @@
     "allow": [
       "Bash(git add *)",
       "Bash(git commit *)",
-      "Bash(git push *)"
+      "Bash(git push *)",
+      "Bash(npm create *)",
+      "Bash(npm install *)",
+      "Bash(python -m venv /c/Users/leone/producer-app/backend/.venv)",
+      "Bash(/c/Users/leone/producer-app/backend/.venv/Scripts/pip install *)",
+      "Bash(/c/Users/leone/producer-app/backend/.venv/Scripts/pip freeze *)",
+      "Bash(.venv/Scripts/alembic init *)",
+      "Bash(.venv/Scripts/python -c \"from app.models.user import User; from app.core.database import Base; print\\('Tables:', list\\(Base.metadata.tables.keys\\(\\)\\)\\)\")",
+      "Bash(.venv/Scripts/alembic revision *)",
+      "Bash(docker info *)",
+      "PowerShell(docker info 2>&1)",
+      "PowerShell(Get-Process python -ErrorAction SilentlyContinue)"
     ]
   }
 }
