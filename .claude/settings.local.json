@@ -14,7 +14,14 @@
       "Bash(.venv/Scripts/alembic revision *)",
       "Bash(docker info *)",
       "PowerShell(docker info 2>&1)",
-      "PowerShell(Get-Process python -ErrorAction SilentlyContinue)"
+      "PowerShell(Get-Process python -ErrorAction SilentlyContinue)",
+      "Bash(python -c \"from app.services.gemini import ask, stream, get_system_prompt, build_profile_context; print\\('OK'\\)\")",
+      "PowerShell($key = \"AIzaSyCAjCEhRllgVhNeR8H6jlHWgLubWkk8MdU\"; Invoke-RestMethod -Uri \"https://generativelanguage.googleapis.com/v1beta/models?key=$key\" -Method GET | Select-Object -ExpandProperty models | Select-Object -First 3 -ExpandProperty name)",
+      "Bash(Get-ChildItem -Path \"C:\\\\Users\\\\leone\\\\producer-app\\\\frontend\" -Recurse)",
+      "Bash(Select-Object FullName)",
+      "Bash(ConvertTo-Csv -NoTypeInformation)",
+      "Bash(Out-String)",
+      "PowerShell(Get-ChildItem -Path \"C:\\\\Users\\\\leone\\\\producer-app\\\\frontend\" -Depth 1 | Select-Object Name, @{N='Type';E={if\\($_.PSIsContainer\\){'Directory'}else{'File'}}})"
     ]
   }
 }
