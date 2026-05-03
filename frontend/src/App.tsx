@@ -2,6 +2,9 @@ import { useEffect } from 'react';
 import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
 import { useTelegramAuth } from './hooks/useTelegramAuth';
 import { useStore } from './store/useStore';
+import UserTypeSelect from './components/Onboarding/UserTypeSelect';
+import OnboardingBlogger from './components/Onboarding/OnboardingBlogger';
+import OnboardingMusician from './components/Onboarding/OnboardingMusician';
 
 function AppRoutes() {
   const { loading, error } = useTelegramAuth();
@@ -41,18 +44,9 @@ function AppRoutes() {
             : <Navigate to="/onboarding" replace />
         }
       />
-      <Route
-        path="/onboarding"
-        element={<div className="min-h-screen bg-[#0F0F0F] text-white p-6">Выбор типа</div>}
-      />
-      <Route
-        path="/onboarding/blogger"
-        element={<div className="min-h-screen bg-[#0F0F0F] text-white p-6">Онбординг — блогер</div>}
-      />
-      <Route
-        path="/onboarding/musician"
-        element={<div className="min-h-screen bg-[#0F0F0F] text-white p-6">Онбординг — музыкант</div>}
-      />
+      <Route path="/onboarding" element={<UserTypeSelect />} />
+      <Route path="/onboarding/blogger" element={<OnboardingBlogger />} />
+      <Route path="/onboarding/musician" element={<OnboardingMusician />} />
       <Route
         path="/app/*"
         element={<div className="min-h-screen bg-[#0F0F0F] text-white p-6">Дашборд</div>}

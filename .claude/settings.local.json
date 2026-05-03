@@ -21,7 +21,9 @@
       "Bash(Select-Object FullName)",
       "Bash(ConvertTo-Csv -NoTypeInformation)",
       "Bash(Out-String)",
-      "PowerShell(Get-ChildItem -Path \"C:\\\\Users\\\\leone\\\\producer-app\\\\frontend\" -Depth 1 | Select-Object Name, @{N='Type';E={if\\($_.PSIsContainer\\){'Directory'}else{'File'}}})"
+      "PowerShell(Get-ChildItem -Path \"C:\\\\Users\\\\leone\\\\producer-app\\\\frontend\" -Depth 1 | Select-Object Name, @{N='Type';E={if\\($_.PSIsContainer\\){'Directory'}else{'File'}}})",
+      "PowerShell(New-Item -ItemType Directory -Force -Path C:\\\\Users\\\\leone\\\\producer-app\\\\frontend\\\\src\\\\components\\\\Onboarding)",
+      "PowerShell(cd C:\\\\Users\\\\leone\\\\producer-app\\\\frontend; npx tsc --noEmit 2>&1; echo \"Exit: $LASTEXITCODE\")"
     ]
   }
 }
